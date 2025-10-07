@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ContaColli – Informativa sulla Privacy</title>
+  <meta name="description" content="Informativa sulla privacy dell'app iOS ContaColli. Nessuna raccolta di dati, tutto resta sul dispositivo.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --border: #d2d2d7;
+      --link: #007aff;
+      --accent: #34c759;
+      --card: #f5f5f7;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 800px; margin: 0 auto; padding: 48px 20px 100px; }
+    header { display: flex; align-items: center; gap: 14px; margin: 8px 0 24px; flex-wrap: wrap; }
+    .badge { background: var(--accent); color: white; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 500; letter-spacing: .02em; }
+    h1 { font-size: 32px; font-weight: 600; margin: 0 0 4px; }
+    h2 { font-size: 22px; margin-top: 32px; border-top: 1px solid var(--border); padding-top: 18px; }
+    p, li { color: var(--text); font-size: 17px; }
+    .muted { color: var(--muted); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 40px; font-size: 14px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 20px; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --text: #f5f5f7;
+        --muted: #a1a1a6;
+        --border: #2c2c2e;
+        --card: #1c1c1e;
+        --link: #0a84ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="3" y="6.5" width="18" height="11" rx="2" stroke="#34c759" stroke-width="1.5"/>
+        <path d="M7 10h10M7 13h10" stroke="#34c759" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1>ContaColli – Informativa sulla Privacy</h1>
+        <div class="muted">Ultimo aggiornamento: <span id="last-update">oggi</span></div>
+      </div>
+      <span class="badge" title="Dati solo locali">Dati solo locali</span>
+    </header>
+
+    <div class="card">
+      <p><strong>ContaColli</strong> è progettata per funzionare interamente sul dispositivo dell’utente. Non raccoglie, memorizza o condivide alcun dato personale o sensibile. Tutte le informazioni (come numero di colli, orari e statistiche) restano esclusivamente salvate in locale sul dispositivo e non vengono trasmesse a server esterni o servizi di terze parti.</p>
+    </div>
+
+    <h2>1. Dati raccolti</h2>
+    <p>L’app <strong>non raccoglie alcun tipo di dato personale o non personale</strong>. In particolare, non vengono raccolti:</p>
+    <ul>
+      <li>Dati di contatto (nome, email, numero di telefono)</li>
+      <li>Dati di posizione o GPS</li>
+      <li>Dati di utilizzo o analitici</li>
+      <li>Identificativi del dispositivo o pubblicitari</li>
+      <li>Contenuti generati dall’utente inviati a server remoti</li>
+      <li>Dati relativi a pagamenti, acquisti o transazioni</li>
+    </ul>
+
+    <h2>2. Archiviazione dei dati</h2>
+    <p>Tutti i dati inseriti (ad es. numero di colli, orari, liste, medie) vengono archiviati <strong>solo sul dispositivo</strong> dell’utente e possono essere rimossi in qualsiasi momento disinstallando l’app.</p>
+
+    <h2>3. Accesso a funzioni di sistema</h2>
+    <p>ContaColli non richiede autorizzazioni speciali (come fotocamera, microfono, contatti o posizione) e non accede a foto, file, sensori o altre risorse personali del dispositivo.</p>
+
+    <h2>4. Servizi di terze parti</h2>
+    <p>L’app <strong>non utilizza servizi di terze parti</strong>, framework di analisi, tracciamento o pubblicità.</p>
+
+    <h2>5. Sicurezza</h2>
+    <p>Poiché i dati restano sul dispositivo, non sono condivisi con altri utenti né sincronizzati in rete. iOS gestisce automaticamente la protezione del contenuto locale tramite i propri sistemi di sicurezza e sandbox.</p>
+
+    <h2>6. Diritti dell’utente</h2>
+    <p>L’utente mantiene il pieno controllo dei propri dati: disinstallando l’app, tutte le informazioni locali vengono eliminate definitivamente. Non è richiesto alcun consenso al trattamento dei dati poiché non avviene alcuna raccolta o trattamento ai sensi del GDPR.</p>
+
+    <h2>7. Contatti</h2>
+    <p>Per chiarimenti sulla privacy o sul funzionamento dell’app: <a href="mailto:privacy@esempio.it">privacy@esempio.it</a>.</p>
+
+    <footer>
+      <p>© <span id="year"></span> ContaColli. Questa pagina è ospitata su GitHub Pages.</p>
+    </footer>
+  </div>
+
+  <script>
+    const d = new Date();
+    const months = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+    document.getElementById("last-update").textContent = d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear();
+    document.getElementById("year").textContent = d.getFullYear();
+  </script>
+</body>
+</html>
